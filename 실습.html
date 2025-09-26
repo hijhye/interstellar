@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        /* background-color: orange; */
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 100%;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+      }
+
+      li:not(:nth-child(1)) {
+        /*li를 제외할건데 누구냐면 nth자식중에서 첫번째*/
+        margin-top: -1px;
+      }
+      /* li:nth-child(2),
+      li:nth-child(3) {
+        margin-top: -1px;
+      } */
+
+      .title {
+        padding: 5px 0px 5px 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .txt {
+        width: 90%;
+        margin: 10px auto 30px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="title">title01</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi
+          maxime minima esse sequi distinctio nobis, nulla sapiente ut error
+          adipisci laborum beatae, reprehenderit ducimus maiores. Voluptatibus,
+          quibusdam? Ab, minima.
+        </div>
+      </li>
+      <li>
+        <div class="title">title02</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi
+          maxime minima esse sequi distinctio nobis, nulla sapiente ut error
+          adipisci laborum beatae, reprehenderit ducimus maiores. Voluptatibus,
+          quibusdam? Ab, minima.
+        </div>
+      </li>
+      <li>
+        <div class="title">title03</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi
+          maxime minima esse sequi distinctio nobis, nulla sapiente ut error
+          adipisci laborum beatae, reprehenderit ducimus maiores. Voluptatibus,
+          quibusdam? Ab, minima.
+        </div>
+      </li>
+    </ul>
+    <script>
+      //   $("li").on("click", function () {
+      //     $("li .txt").slideUp();
+      //     $(this).toggleClass("on");
+      //     if ($(this).hasClass("on")) {
+      //       $(this).children(".txt").slideDown();
+      //     }
+      //   });
+      //내맘대로 작성했는데 명확하지는 않은 코드임
+
+      $("li").on("click", function () {
+        //li를 클릭하면 실행하셈
+        let isOn = $(this).hasClass("on"); //클릭한 애한테 클래스 on이 붙어있는지 확인해서 isOn 변수에 넣어라
+        //isOn 변수 자체가 True/False 값이 나오기 때문에 이거 자체만으로 조건문이 될 수 있음.
+        console.log(isOn);
+        if (isOn) {
+          //만약 isO이 참이라면 ..?
+          $(this).removeClass("on"); //이것에 붙은 클래스on을 삭제해라
+          $(this).children(".txt").slideUp(); //이것의 자식 .txt를 슬라이드업해라
+        } else {
+          //아니다 isOn이 거짓이라면
+          $("li").removeClass("on"); //li에서 클래스on을 삭제
+          $(this).addClass("on"); //이것에 클래스 on을 붙여
+          $("li .txt").slideUp(); //모든 li txt를 슬라이드 업
+          $(this).children(".txt").slideDown(); //이것의 자식 txt만 슬라이드다운
+        }
+      });
+    </script>
+  </body>
+</html>
