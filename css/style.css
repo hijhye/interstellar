@@ -46,8 +46,10 @@ img {
 /*contentwrap*/
 .contentWrap {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
+  background: url(../img/bg1blur.jpg) center / cover no-repeat;
+  background-attachment: fixed;
+  /* background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px); */
   position: absolute;
   width: 100%;
   bottom: 50px;
