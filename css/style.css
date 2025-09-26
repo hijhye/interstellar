@@ -107,7 +107,9 @@ img {
 }
 .category02 .detail .txtwrap {
   width: 50%;
+  padding-right: 30px;
   overflow-y: scroll;
+  scrollbar-width: thin;
 }
 .category02 .detail p {
   width: 100%;
