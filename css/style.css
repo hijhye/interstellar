@@ -172,3 +172,16 @@ img {
 .category05 .detail .forms div:nth-child(2) {
   height: 100px;
 }
+
+.title p i.on {
+  animation: ani 1s infinite alternate;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

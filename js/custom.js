@@ -10,14 +10,9 @@ $(function () {
       $("contentWrap .title").removeClass("on");
       $(this).addClass("on");
       $(this).siblings(".detail").addClass("on");
+      $(".title p i").removeClass("on");
+      $(this).find("i").addClass("on");
     }
-  });
-
-  $(".contentWrap .title").on("mouseenter", function () {
-    $(this).children("p").stop().animate({ "margin-right": "-10px" });
-  });
-  $(".contentWrap .title").on("mouseleave", function () {
-    $(this).children("p").animate({ "margin-right": "0px" });
   });
 
   $(".category02 .detail .scroll div").on("click", function () {
