@@ -5,6 +5,7 @@ $(function () {
     if (isOn) {
       $(this).removeClass("on");
       $(this).siblings(".detail").removeClass("on");
+      $(".title p i").removeClass("on");
     } else {
       $(".contentWrap .detail").removeClass("on");
       $("contentWrap .title").removeClass("on");
