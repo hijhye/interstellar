@@ -107,6 +107,7 @@ img {
 }
 .category02 .detail .txtwrap {
   width: 50%;
+  overflow-y: scroll;
 }
 .category02 .detail p {
   width: 100%;
