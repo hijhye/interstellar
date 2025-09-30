@@ -52,7 +52,7 @@ img {
   backdrop-filter: blur(5px); */
   position: absolute;
   width: 100%;
-  bottom: 50px;
+  bottom: 100px;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
@@ -108,13 +108,26 @@ img {
 .category02 .detail .txtwrap {
   width: 50%;
   padding-right: 30px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
+  overflow-y: auto;
 }
+.category02 .detail .txtwrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+.category02 .detail .txtwrap::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.category02 .detail .txtwrap::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
 .category02 .detail p {
   width: 100%;
   transform: translateY(20%);
   transition: 2s;
+  line-height: 160%;
 }
 .category02 .detail p.scrollup {
   transform: translateY(-100px);
@@ -172,11 +185,16 @@ img {
   border: 1px solid #ccc;
   box-sizing: border-box;
   padding: 5px;
-}
-.category05 .detail .forms input:nth-child(1) {
   height: 30px;
+  display: block;
 }
-.category05 .detail .forms input:nth-child(2) {
+
+.category05 .detail .forms textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 5px;
   height: 100px;
 }
 
@@ -191,4 +209,16 @@ img {
   100% {
     transform: translateX(100%);
   }
+}
+
+footer {
+  width: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  opacity: 0.8;
 }
