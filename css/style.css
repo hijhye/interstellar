@@ -166,15 +166,17 @@ img {
   width: 100%;
   gap: 10px;
 }
-.category05 .detail .forms div {
+.category05 .detail .forms input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 5px;
 }
-.category05 .detail .forms div:nth-child(1) {
+.category05 .detail .forms input:nth-child(1) {
   height: 30px;
 }
-.category05 .detail .forms div:nth-child(2) {
+.category05 .detail .forms input:nth-child(2) {
   height: 100px;
 }
 
